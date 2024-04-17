@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 0;
+    padding: 16px 0;
 /*     
     .logo {
         pointer-events: none;
@@ -16,10 +16,14 @@
     
     .list {
         display: flex;
-        gap: 8px;
+        gap: 16px;
     }
 
     .link {
-            color: var(--button);
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.25;
+        text-align: center;
+        color: var(--button);
         }
 }

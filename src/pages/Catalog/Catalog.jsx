@@ -1,8 +1,16 @@
-import React from 'react'
+import AsideFilter from 'components/AsideFilter/AsideFilter'
+import CatalogList from 'components/CatalogList/CatalogList'
+
+import css from './Catalog.module.css'
 
 const Catalog = () => {
   return (
-    <div>Catalog</div>
+    <section>
+      <div className={`container ${css.catalog}`}>
+        <AsideFilter />
+        <CatalogList />
+      </div>
+    </section>
   )
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+// import css from './Revievs.module.css'
 
 const Reviews = () => {
   return (

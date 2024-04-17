@@ -1,16 +1,19 @@
 import { Svg } from 'components/Icons/Icons'
 import css from './CatalogListCard.module.css'
 import List from 'components/List/List'
+import Button from 'components/Button/Button'
 // import CategoriesList from 'components/CategoriesList/CategoriesList'
 
-const CatalogListCard = ({ transmission, engine, children, name, price, rating, reviews, location, description, details, adults, }) => {
+const CatalogListCard = ({ image, transmission, engine, children, name, price, rating, reviews, location, description, details, adults, }) => {
   
   const numberOfReviews = reviews.length
   const showDescription = description.slice(0, 65)
 
   return (
     <div className={css.card}>
-      <div className={css.image}></div>
+      <div className={css.image}>
+        <img src={image} alt={name} width={290} height={310}/>
+      </div>
       <div className={css.cardInfo}>
         <div className={css.position}>
            <h2 className={css.titlePrice}>{name}</h2>
@@ -33,10 +36,14 @@ const CatalogListCard = ({ transmission, engine, children, name, price, rating, 
         </ul>
         <p className={css.description}>{showDescription}...</p>
         {/* <CategoriesList details={details}/> */}
-        <List adults={adults}
-            children={children}
-            engine={engine}
-            transmission={transmission}/>
+        <List
+          adults={adults}
+          children={children}
+          engine={engine}
+          transmission={transmission}
+          details={details}
+        />
+        <Button showColor={true} text={'Show more'}/>
       </div>
     </div>
   )

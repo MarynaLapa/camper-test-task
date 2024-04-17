@@ -1,0 +1,16 @@
+.btn {
+    display: block;
+    border-radius: 200px;
+    padding: 16px 40px;
+    /* width: 166px;
+    height: 56px; */
+    border: none;
+    letter-spacing: -0.01em;
+    background-color: var(--white);
+    color: var(--main)
+}
+
+.color {
+    background-color: var(--button);
+    color: var(--white)
+}

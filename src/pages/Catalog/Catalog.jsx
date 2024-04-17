@@ -5,7 +5,7 @@ import css from './Catalog.module.css'
 
 const Catalog = () => {
   return (
-    <section>
+    <section className={css.section}>
       <div className={`container ${css.catalog}`}>
         <AsideFilter />
         <CatalogList />

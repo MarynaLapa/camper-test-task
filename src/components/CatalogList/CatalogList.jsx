@@ -20,6 +20,7 @@ const CatalogList = () => {
             children={camper.children}
             engine={camper.engine}
             transmission={camper.transmission}
+            image={camper.gallery[0]}
           />  
         </li>
         )} 

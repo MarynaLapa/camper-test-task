@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     column-gap: 8px;
     row-gap: 8px;
+    margin-bottom: 24px;
 }
 
 .item {
@@ -24,14 +25,6 @@
 .wrapp {
     display: flex;
     gap: 4px;
-}
-
-/* .number {
-    margin-right: 4px;
-} */
-
-.text {
-    display: inline;
 }
 
 .text::first-letter {

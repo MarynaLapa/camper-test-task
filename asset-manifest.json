@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/camper-test-task/static/css/main.c73f0bc8.css",
-    "main.js": "/camper-test-task/static/js/main.59d5eb10.js",
-    "static/css/370.f0938da8.chunk.css": "/camper-test-task/static/css/370.f0938da8.chunk.css",
-    "static/js/370.9a0b8c13.chunk.js": "/camper-test-task/static/js/370.9a0b8c13.chunk.js",
+    "main.css": "/camper-test-task/static/css/main.73389d63.css",
+    "main.js": "/camper-test-task/static/js/main.22e365a1.js",
+    "static/css/85.695f3f7d.chunk.css": "/camper-test-task/static/css/85.695f3f7d.chunk.css",
+    "static/js/85.d76e21f7.chunk.js": "/camper-test-task/static/js/85.d76e21f7.chunk.js",
     "static/js/733.4ff361f4.chunk.js": "/camper-test-task/static/js/733.4ff361f4.chunk.js",
-    "static/media/icons.svg": "/camper-test-task/static/media/icons.94d249b54a22c38d2ddc4440ccc4fd67.svg",
+    "static/media/icons.svg": "/camper-test-task/static/media/icons.fdb74cc11c60f56f88d8cde062567622.svg",
+    "static/media/ac.svg": "/camper-test-task/static/media/ac.65778975d82b7c6d3fe9de746a895cd2.svg",
     "index.html": "/camper-test-task/index.html",
-    "main.c73f0bc8.css.map": "/camper-test-task/static/css/main.c73f0bc8.css.map",
-    "main.59d5eb10.js.map": "/camper-test-task/static/js/main.59d5eb10.js.map",
-    "370.f0938da8.chunk.css.map": "/camper-test-task/static/css/370.f0938da8.chunk.css.map",
-    "370.9a0b8c13.chunk.js.map": "/camper-test-task/static/js/370.9a0b8c13.chunk.js.map",
+    "main.73389d63.css.map": "/camper-test-task/static/css/main.73389d63.css.map",
+    "main.22e365a1.js.map": "/camper-test-task/static/js/main.22e365a1.js.map",
+    "85.695f3f7d.chunk.css.map": "/camper-test-task/static/css/85.695f3f7d.chunk.css.map",
+    "85.d76e21f7.chunk.js.map": "/camper-test-task/static/js/85.d76e21f7.chunk.js.map",
     "733.4ff361f4.chunk.js.map": "/camper-test-task/static/js/733.4ff361f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c73f0bc8.css",
-    "static/js/main.59d5eb10.js"
+    "static/css/main.73389d63.css",
+    "static/js/main.22e365a1.js"
   ]
 }

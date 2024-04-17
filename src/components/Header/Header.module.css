@@ -1,0 +1,25 @@
+.header {
+    /* font-size: calc(10px + 2vmin); */
+    color: white;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+/*     
+    .logo {
+        pointer-events: none;
+        filter: invert(1);
+    } */
+    
+    .list {
+        display: flex;
+        gap: 8px;
+    }
+
+    .link {
+            color: var(--button);
+        }
+}

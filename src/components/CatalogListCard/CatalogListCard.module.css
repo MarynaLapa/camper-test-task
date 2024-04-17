@@ -15,7 +15,14 @@
 }
 
 .cardInfo {
+    width: 526px;
+}
 
+.position {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
 }
 
 .titlePrice {
@@ -23,4 +30,45 @@
     font-size: 24px;
     line-height: 1.25;
     color: var(--main);
+}
+
+.positionPrice {
+    display: flex;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+}
+
+.icon {
+    display: block;
+    stroke: var(--main);
+    fill: transparent;
+}
+
+.list {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--main);
+}
+
+.rating {
+    text-decoration: underline;
+    text-decoration-skip-ink: none; 
+} 
+
+.description {
+    display: inline-flex;
+    width: 525px;
+    height: 24px;
+    overflow-y: hidden;
+    margin-bottom: 24px;
 }

@@ -1,16 +1,21 @@
 import CatalogListCard from 'components/CatalogListCard/CatalogListCard'
 // import css from './CatalogList.module.css'
-import cars from "./car.json"
+import campers from "./car.json"
 
 const CatalogList = () => {
-  console.log('car', cars)
+  console.log('car', campers)
   return (
     <ul>
-      {cars.map(car => 
-        <li>
+      {campers.map(camper => 
+        <li key={camper._id}>
           <CatalogListCard
-            name={car.name}
-            price={car.price}
+            name={camper.name}
+            price={camper.price}
+            rating={camper.rating}
+            location={camper.location}
+            reviews={camper.reviews}
+            description={camper.description}
+            details={camper.details}
           />  
         </li>
         )} 

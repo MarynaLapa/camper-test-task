@@ -16,6 +16,10 @@ const CatalogList = () => {
             reviews={camper.reviews}
             description={camper.description}
             details={camper.details}
+            adults={camper.adults}
+            children={camper.children}
+            engine={camper.engine}
+            transmission={camper.transmission}
           />  
         </li>
         )} 

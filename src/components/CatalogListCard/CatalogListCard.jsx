@@ -1,8 +1,9 @@
 import { Svg } from 'components/Icons/Icons'
 import css from './CatalogListCard.module.css'
-import CategoriesList from 'components/CategoriesList/CategoriesList'
+import List from 'components/List/List'
+// import CategoriesList from 'components/CategoriesList/CategoriesList'
 
-const CatalogListCard = ({ name, price, rating, reviews, location, description, details}) => {
+const CatalogListCard = ({ transmission, engine, children, name, price, rating, reviews, location, description, details, adults, }) => {
   
   const numberOfReviews = reviews.length
   const showDescription = description.slice(0, 65)
@@ -31,7 +32,11 @@ const CatalogListCard = ({ name, price, rating, reviews, location, description, 
           </li>
         </ul>
         <p className={css.description}>{showDescription}...</p>
-        <CategoriesList details={details}/>
+        {/* <CategoriesList details={details}/> */}
+        <List adults={adults}
+            children={children}
+            engine={engine}
+            transmission={transmission}/>
       </div>
     </div>
   )

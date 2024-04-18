@@ -1,0 +1,7 @@
+.list {
+    margin-bottom: 50px;
+}
+
+.item:not(:last-child) {
+    margin-bottom: 32px;
+}

@@ -1,13 +1,18 @@
+import { useSelector } from 'react-redux'
+import { advertsSelector } from 'store/camper/selctors'
+
 import CatalogListCard from 'components/CatalogListCard/CatalogListCard'
-// import css from './CatalogList.module.css'
-import campers from "./car.json"
+
+import css from './CatalogList.module.css'
 
 const CatalogList = () => {
-  console.log('car', campers)
+
+  const campers = useSelector(advertsSelector)
+  
   return (
-    <ul>
-      {campers.map(camper => 
-        <li key={camper._id}>
+    <ul className={css.list}>
+      {campers && campers.map(camper => 
+        <li key={camper._id} className={css.item}>
           <CatalogListCard
             name={camper.name}
             price={camper.price}
@@ -25,6 +30,7 @@ const CatalogList = () => {
         </li>
         )} 
     </ul>
+  
   )
 }
 

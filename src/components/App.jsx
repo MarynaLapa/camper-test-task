@@ -1,8 +1,11 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import HomePage from "pages/HomePage/HomePage";
-
+import { useDispatch } from "react-redux";
+import { getTotalAdvertsThunk } from "store/camper/camperThunk";
+// import { useSelector } from "react-redux";
+// import { isLoadingSelector } from "store/camper/selctors";
 
 const Catalog = lazy(() => import('pages/Catalog/Catalog'))
 const Favorites = lazy(()=>import('pages/Favorites/Favorites'))
@@ -10,6 +13,17 @@ const Favorites = lazy(()=>import('pages/Favorites/Favorites'))
 // const Reviews = lazy(() => import('./Reviews/Reviews'))
 
 export const App = () => {
+
+  const dispatch = useDispatch()
+  
+  useEffect(() => {
+
+  dispatch(getTotalAdvertsThunk())
+
+  }, [dispatch])
+  
+  // const isLoading = useSelector(isLoadingSelector)
+
   //Потрібно зробити сторінку фаворіт, а на ній модалку в якій вже є відміності.??
   return (
     <Suspense fallback={<>Loading...</>}>

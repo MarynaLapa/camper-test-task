@@ -19,8 +19,11 @@ const camperSlice = createSlice({
                 state.totalResults = payload
             })
             .addCase(getPageAdvertsThunk.fulfilled, (state, { payload }) => {
-                console.log('state', state)
-                state.adverts = [...payload]
+                state.adverts = [...state.adverts, ...payload]
+                // let set = new Set(state.adverts);
+                // set.add(payload)
+                // console.log('set', set.values().next().value)
+                // state.adverts = set.values().next().value
             })
             .addMatcher((action) => action.type.endsWith('/pending'), handlerPending)
             .addMatcher((action) => action.type.endsWith('/fulfilled'), handlerFulfilled)

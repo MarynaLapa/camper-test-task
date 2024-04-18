@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
-import { getAllAdverts, getPageAdverts } from "components/api/camper"
+import { getAllAdverts, getFirstPageAdverts, getPageAdverts } from "components/api/camper"
 
 export const getTotalAdvertsThunk = createAsyncThunk(
     'adverts/getAllAdverts', async(__, { rejectWithValue }) => {
@@ -17,6 +17,18 @@ export const getPageAdvertsThunk = createAsyncThunk(
         try {
             console.log('body', body)
             const data = await getPageAdverts(body)
+            return data
+        } catch (error) {
+            console.log('error', error)
+            return rejectWithValue(error);
+        }
+    }
+)
+
+export const getFirstPageAdvertsThunk = createAsyncThunk(
+    'adverts/getLimitAdverts', async (_, { rejectWithValue }) => {
+        try {
+            const data = await getFirstPageAdverts()
             return data
         } catch (error) {
             console.log('error', error)

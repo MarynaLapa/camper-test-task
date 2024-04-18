@@ -2,3 +2,10 @@
     width: 360px;
     /* height: 100vh; */
 }
+.title {
+    margin-bottom: 24px;
+}
+
+.hr { 
+    margin-bottom: 24px;
+}

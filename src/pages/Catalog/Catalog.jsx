@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getPageAdvertsThunk } from 'store/camper/camperThunk'
+import { useState } from 'react'
+import { useSelector } from 'react-redux'
+// import { getFirstPageAdvertsThunk, getPageAdvertsThunk, getTotalAdvertsThunk } from 'store/camper/camperThunk'
 import AsideFilter from 'components/AsideFilter/AsideFilter'
 import CatalogList from 'components/CatalogList/CatalogList'
 
@@ -14,28 +14,27 @@ const Catalog = () => {
   const [page, setPage] = useState(1)
   const [showMore, setShowMore] = useState(true)
 
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
   const total = useSelector(totalSelector)
+  // const adverts = useSelector(advertsSelector)
   
-  useEffect(() => {
-
-    dispatch(getPageAdvertsThunk({
-      limit, 
-      page
-    }))
-
-  }, [dispatch, limit, page])
-  
+    
   const hendlerClick = () => {
 
-    if (total.length - limit*page > limit) {
+    if (total.length > limit*page) {
       setPage(page + 1)
+
+      // dispatch(getPageAdvertsThunk({
+      //   limit, 
+      //   page
+      // }))
       setShowMore(true)
-    } else {
-      setShowMore(false)
-      // setPage(1)
     }
+    // else if (limit * page > adverts.length) {
+    //   setShowMore(false)
+    //   // setPage(1)
+    // }
   }
 
   return (

@@ -7,11 +7,18 @@ import css from './CatalogList.module.css'
 
 const CatalogList = () => {
 
-  const campers = useSelector(advertsSelector)
+  const adverts = useSelector(advertsSelector)
+  let set = new Set();
+  set.add(adverts)
+  const campers =  set.values().next().value
+
+  console.log('campers', campers)
   
+
+
   return (
     <ul className={css.list}>
-      {campers && campers.map(camper => 
+      {campers.length && campers.map(camper => 
         <li key={camper._id} className={css.item}>
           <CatalogListCard
             name={camper.name}

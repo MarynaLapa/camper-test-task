@@ -3,9 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import HomePage from "pages/HomePage/HomePage";
 import { useDispatch } from "react-redux";
-import { getTotalAdvertsThunk } from "store/camper/camperThunk";
-// import { useSelector } from "react-redux";
-// import { isLoadingSelector } from "store/camper/selctors";
+import { getFirstPageAdvertsThunk, getTotalAdvertsThunk } from "store/camper/camperThunk";
 
 const Catalog = lazy(() => import('pages/Catalog/Catalog'))
 const Favorites = lazy(()=>import('pages/Favorites/Favorites'))
@@ -18,9 +16,10 @@ export const App = () => {
   
   useEffect(() => {
 
-  dispatch(getTotalAdvertsThunk())
+    dispatch(getTotalAdvertsThunk())
+    dispatch(getFirstPageAdvertsThunk())
 
-  }, [dispatch])
+}, [dispatch])
   
   // const isLoading = useSelector(isLoadingSelector)
 

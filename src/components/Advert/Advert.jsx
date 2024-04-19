@@ -1,10 +1,11 @@
 import { useCallback } from 'react';
 import { useEffect } from 'react'
 import css from "./Advert.module.css"
+import AdvertCard from 'components/AdvertCard/AdvertCard';
 
-const Advert = ({ active, onClose, children}) => {
+const Advert = ({ active, onClose }) => {
 
-    const handlerClick = useCallback((e) => {
+        const handlerClick = useCallback((e) => {
        
         if (e.code === 'Escape') onClose();
         if (e.currentTarget === e.target) onClose();
@@ -24,7 +25,7 @@ const Advert = ({ active, onClose, children}) => {
     return (
         <div className={active ? css.backdrop + " " + css.backdropActive : css.backdrop} onClick={handlerClick}>
             <div className={active ? css.modalContent + " " + css.modalContentActive : css.modalContent} onClick={(e)=>{ e.stopPropagation()}}>
-               
+               <AdvertCard />
             </div>
         </div>
     )

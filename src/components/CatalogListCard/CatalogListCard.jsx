@@ -3,25 +3,34 @@ import css from './CatalogListCard.module.css'
 import List from 'components/List/List'
 import Button from 'components/Button/Button'
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
 import Advert from 'components/Advert/Advert'
-// import CategoriesList from 'components/CategoriesList/CategoriesList'
+import { useDispatch } from 'react-redux'
+import { getCamperInfoThunk } from 'store/camper/camperThunk'
+import RatingLocationList from 'components/RatingLocationList/RatingLocationList'
 
 const CatalogListCard = ({ id, image, transmission, engine, children, name, price, rating, reviews, location, description, details, adults, }) => {
   
   const [showModal, setShowModal] = useState(false) 
 
-  const numberOfReviews = reviews.length
   const showDescription = description.slice(0, 65)
 
-  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const handlerClick = () => {
-    navigate('catalog/:catalogId')
+    dispatch(getCamperInfoThunk(id))
+    .unwrap()
+      .then((payload) => {
+        setShowModal(true)
+        // Notify.success("You have successfully exited")
+       })
+      .catch((error) => {
+        // Notify.failure("Something went wrong with your logout!")
+    })
+
   }
 
   const handlerClose = () => {
-    setShowModal(!showModal)
+    setShowModal(false)
   }
   return (
     <div className={css.card}>
@@ -38,18 +47,12 @@ const CatalogListCard = ({ id, image, transmission, engine, children, name, pric
               </button>
             </div>
         </div>
-        <ul className={css.list}>
-          <li className={css.item}>
-            <Svg id="#rating-star" width={16} height={16} />
-            <p className={css.rating}>{rating} ({numberOfReviews} Reviews)</p>
-          </li>
-          <li className={css.item}>
-            <Svg id="#location" width={16} height={16} icon={css.icon} />
-            <p>{location}</p>
-          </li>
-        </ul>
+        <RatingLocationList
+          rating={rating}
+          reviews={reviews}
+          location={location}
+        />
         <p className={css.description}>{showDescription}...</p>
-        {/* <CategoriesList details={details}/> */}
         <List
           adults={adults}
           children={children}
@@ -57,12 +60,9 @@ const CatalogListCard = ({ id, image, transmission, engine, children, name, pric
           transmission={transmission}
           details={details}
         />
-        <Link to={`/adverts/${id}`} state={{ from: location }} onClick={handlerClick}>Show more</Link>
-        {/* <Button showColor={true} text={'Show more'} onClick={handlerClick}/> */}
+        <Button showColor={true} text={'Show more'} onClick={handlerClick}/>
       </div>
-      <Advert active={showModal} onClose={handlerClose}>
-        <div style={{ width: 200, height: 200, background: "#fff"}} ></div>
-      </Advert>
+      <Advert active={showModal} onClose={handlerClose} />
     </div>
   )
 }

@@ -1,0 +1,22 @@
+.icon {
+    display: block;
+    stroke: var(--main);
+    fill: transparent;
+}
+
+.list {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--main);
+}
+
+.bottom {
+    margin-bottom: 16px;
+}

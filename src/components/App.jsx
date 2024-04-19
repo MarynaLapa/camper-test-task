@@ -3,7 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import HomePage from "pages/HomePage/HomePage";
 import { useDispatch } from "react-redux";
-import { getFirstPageAdvertsThunk, getTotalAdvertsThunk } from "store/camper/camperThunk";
+import { getTotalAdvertsThunk } from "store/camper/camperThunk";
+import Advert from "./Advert/Advert";
 
 const Catalog = lazy(() => import('pages/Catalog/Catalog'))
 const Favorites = lazy(()=>import('pages/Favorites/Favorites'))
@@ -17,7 +18,7 @@ export const App = () => {
   useEffect(() => {
 
     dispatch(getTotalAdvertsThunk())
-    dispatch(getFirstPageAdvertsThunk())
+    // dispatch(getFirstPageAdvertsThunk())
 
 }, [dispatch])
   
@@ -30,6 +31,7 @@ export const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="catalog" element={<Catalog />} />
+          <Route path='catalog/:catalogId' element={<Advert />} />
           <Route path="favorites" element={<Favorites />}>
             {/* <Route path="features" element={<Features />} />
             <Route path="reviews" element={<Reviews />} /> */}

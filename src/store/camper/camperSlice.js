@@ -18,12 +18,11 @@ const camperSlice = createSlice({
             .addCase(getTotalAdvertsThunk.fulfilled, (state, { payload }) => {
                 state.totalResults = payload
             })
+            // .addCase(getFirstPageAdvertsThunk.fulfilled, (state, { payload }) => {
+            //     state.adverts = payload
+            // })
             .addCase(getPageAdvertsThunk.fulfilled, (state, { payload }) => {
-                state.adverts = [...state.adverts, ...payload]
-                // let set = new Set(state.adverts);
-                // set.add(payload)
-                // console.log('set', set.values().next().value)
-                // state.adverts = set.values().next().value
+                    state.adverts = payload
             })
             .addMatcher((action) => action.type.endsWith('/pending'), handlerPending)
             .addMatcher((action) => action.type.endsWith('/fulfilled'), handlerFulfilled)

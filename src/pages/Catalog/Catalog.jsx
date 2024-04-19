@@ -1,40 +1,35 @@
-import { useState } from 'react'
-import { useSelector } from 'react-redux'
-// import { getFirstPageAdvertsThunk, getPageAdvertsThunk, getTotalAdvertsThunk } from 'store/camper/camperThunk'
+import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getPageAdvertsThunk} from 'store/camper/camperThunk'
 import AsideFilter from 'components/AsideFilter/AsideFilter'
 import CatalogList from 'components/CatalogList/CatalogList'
 
 import css from './Catalog.module.css'
 import Button from 'components/Button/Button'
-import { totalSelector } from 'store/camper/selctors'
+import { advertsSelector, totalSelector } from 'store/camper/selctors'
 
 const Catalog = () => {
 
-  let limit = 4
-  const [page, setPage] = useState(1)
-  const [showMore, setShowMore] = useState(true)
+  const [limit, setLimit] = useState(4)
 
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   const total = useSelector(totalSelector)
-  // const adverts = useSelector(advertsSelector)
+  const adverts = useSelector(advertsSelector)
   
+  useEffect(() => {
+      
+    dispatch(getPageAdvertsThunk({
+      limit
+    }))
+
+}, [dispatch, limit])
     
   const hendlerClick = () => {
 
-    if (total.length > limit*page) {
-      setPage(page + 1)
-
-      // dispatch(getPageAdvertsThunk({
-      //   limit, 
-      //   page
-      // }))
-      setShowMore(true)
+    if (total.length >= adverts.length) {
+        setLimit(limit+4)
     }
-    // else if (limit * page > adverts.length) {
-    //   setShowMore(false)
-    //   // setPage(1)
-    // }
   }
 
   return (
@@ -43,7 +38,7 @@ const Catalog = () => {
         <AsideFilter />
         <div>
           <CatalogList />
-          {showMore && <Button text={"Load more"} onClick={hendlerClick} />}
+          <Button text={"Load more"} onClick={hendlerClick} />
         </div>
       </div>
     </section>

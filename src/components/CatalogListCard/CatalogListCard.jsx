@@ -2,13 +2,27 @@ import { Svg } from 'components/Icons/Icons'
 import css from './CatalogListCard.module.css'
 import List from 'components/List/List'
 import Button from 'components/Button/Button'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import Advert from 'components/Advert/Advert'
 // import CategoriesList from 'components/CategoriesList/CategoriesList'
 
-const CatalogListCard = ({ image, transmission, engine, children, name, price, rating, reviews, location, description, details, adults, }) => {
+const CatalogListCard = ({ id, image, transmission, engine, children, name, price, rating, reviews, location, description, details, adults, }) => {
   
+  const [showModal, setShowModal] = useState(false) 
+
   const numberOfReviews = reviews.length
   const showDescription = description.slice(0, 65)
 
+  const navigate = useNavigate()
+
+  const handlerClick = () => {
+    navigate('catalog/:catalogId')
+  }
+
+  const handlerClose = () => {
+    setShowModal(!showModal)
+  }
   return (
     <div className={css.card}>
       <div className={css.image}>
@@ -43,8 +57,12 @@ const CatalogListCard = ({ image, transmission, engine, children, name, price, r
           transmission={transmission}
           details={details}
         />
-        <Button showColor={true} text={'Show more'}/>
+        <Link to={`/adverts/${id}`} state={{ from: location }} onClick={handlerClick}>Show more</Link>
+        {/* <Button showColor={true} text={'Show more'} onClick={handlerClick}/> */}
       </div>
+      <Advert active={showModal} onClose={handlerClose}>
+        <div style={{ width: 200, height: 200, background: "#fff"}} ></div>
+      </Advert>
     </div>
   )
 }

@@ -1,16 +1,19 @@
 import { api } from "./api";
 
 export const getAllAdverts = async () => {
-    const { data } = await api('/advert')
+    const { data } = await api('/adverts')
     return data
 }
 
-export const getPageAdverts = async ({ page, limit }) => {
-    const { data } = await api(`/advert?page=${page}&limit=${limit}`)
+export const getPageAdverts = async ({ page = 1, limit }) => {
+    const { data } = await api(`/adverts?page=${page}&limit=${limit}`) 
     return data
 }
 
-export const getFirstPageAdverts = async () => {
-    const { data } = await api(`/advert?page=1&limit=4`)
-    return data
+export const getCamperId = async (id) => {
+
+	const { data } = await api(`/adverts/${id}`)
+    console.log('data', data)
+	return data
 }
+// console.log('first', getCamperId("1"))

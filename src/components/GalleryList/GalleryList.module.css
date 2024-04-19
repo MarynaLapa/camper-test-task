@@ -1,0 +1,12 @@
+.list {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.item {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 290px;
+    height: 310px;
+}

@@ -20,3 +20,8 @@
 .bottom {
     margin-bottom: 16px;
 }
+
+.rating {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}

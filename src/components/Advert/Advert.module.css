@@ -33,18 +33,7 @@
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 }
 
-/* .modalContentActive {
-    transform: translateY(25%);
-}
+    .modalContentActive {
+        transform: translateY(5%);
+    }
 
-@media screen and (min-width: 768px) {
-    .modalContentActive {
-        transform: translateY(15%);
-    }
-} */
-/* 
-@media screen and (min-width: 1440px) { */
-    .modalContentActive {
-        transform: translateY(25%);
-    }
-/* } */

@@ -39,29 +39,11 @@
     background-color: transparent;
 }
 
-/* .icon {
+.icon {
     display: block;
     stroke: var(--main);
     fill: transparent;
 }
-
-.list {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 24px;
-}
-
-.item {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    color: var(--main);
-} */
-
-.rating {
-    text-decoration: underline;
-    text-decoration-skip-ink: none; 
-} 
 
 .description {
     display: inline-flex;

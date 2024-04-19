@@ -5,27 +5,28 @@ import AdvertCard from 'components/AdvertCard/AdvertCard';
 
 const Advert = ({ active, onClose }) => {
 
-        const handlerClick = useCallback((e) => {
+    const handlerClick = useCallback((e) => {
        
         if (e.code === 'Escape') onClose();
         if (e.currentTarget === e.target) onClose();
+
     }, [onClose])
 
     useEffect(() => {
         
         document.addEventListener('keydown', handlerClick)
-        // document.body.style.overflow = "hidden"
+        active ? document.body.style.overflow = "hidden" : document.body.style.overflow = ""
     
         return (() => {
-            // document.body.style.overflow = "";  
+            document.body.style.overflow = "";  
             document.removeEventListener('keydown', handlerClick);
         })
-    }, [handlerClick])
+    }, [handlerClick, active])
 
     return (
         <div className={active ? css.backdrop + " " + css.backdropActive : css.backdrop} onClick={handlerClick}>
             <div className={active ? css.modalContent + " " + css.modalContentActive : css.modalContent} onClick={(e)=>{ e.stopPropagation()}}>
-               <AdvertCard />
+               <AdvertCard onClose={onClose}/>
             </div>
         </div>
     )

@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     column-gap: 8px;
     row-gap: 8px;
+    margin-bottom: 44px;
 }
 
 .item {
@@ -26,9 +27,9 @@
     gap: 4px;
 }
 
-/* .number {
+.number {
     margin-right: 4px;
-} */
+}
 
 .text {
     display: inline;

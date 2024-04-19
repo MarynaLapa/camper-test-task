@@ -36,7 +36,7 @@ const CatalogList = () => {
 
   return (
     <ul className={css.list}>
-      {campers.length && campers.map(camper => 
+      {campers.length !== 0 && campers.map(camper => 
         <li key={camper.id} className={css.item}>
           <CatalogListCard
             id={camper.id}

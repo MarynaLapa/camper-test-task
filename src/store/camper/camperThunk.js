@@ -24,12 +24,8 @@ export const getPageAdvertsThunk = createAsyncThunk(
 export const getCamperInfoThunk = createAsyncThunk(
     'adverts/getCamperInfo', async (body, { rejectWithValue }) => {
         try {
-            console.log('body', body)
-            const data = await getCamperId(body)
-            console.log('first', data)
-            return data
+            return await getCamperId(body)
         } catch (error) {
-            console.log('error', error)
             return rejectWithValue(error);
         }
     }

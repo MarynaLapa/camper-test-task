@@ -8,7 +8,7 @@ export const handlerRejected = (state, { payload }) => {
     console.log('payload', payload)
     state.isLoading = false
     state.showMore = false
-    state.isError = payload.error.message
+    state.isError = payload.error
 }
 
 export const handlerFulfilled = state => {

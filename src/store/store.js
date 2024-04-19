@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import {
-//   persistReducer,
-//   persistStore,
+  persistReducer,
+  persistStore,
   FLUSH,
   REHYDRATE,
   PAUSE,
@@ -9,19 +9,19 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-// import storage from 'redux-persist/lib/storage';
+import storage from 'redux-persist/lib/storage';
 import { camperReducer } from './camper/camperSlice';
 
-// const authPersistConfig = {
-//   key: 'auth',
-//   storage,
-//   whitelist: ['token'],
-// };
+const camperPersistConfig = {
+  key: 'auth',
+  storage,
+  whitelist: ['camperInfo'],
+};
 
 export const store = configureStore({
   reducer: {
     // favorite: persistReducer(authPersistConfig, authReducer),
-    camper: camperReducer,
+    camper: persistReducer(camperPersistConfig, camperReducer),
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
@@ -32,4 +32,4 @@ export const store = configureStore({
   devTools: process.env.NODE_ENV === 'development',
 });
 
-// export const persistor = persistStore(store);
+export const persistor = persistStore(store);

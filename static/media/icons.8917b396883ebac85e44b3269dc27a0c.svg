@@ -36,9 +36,9 @@
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3" d="M24 8l-16 16"></path>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3" d="M8 8l16 16"></path>
 </symbol>
-<symbol id="favorite" viewBox="0 0 33 32">
-<path fill="#e44848" style="fill: var(--color1, #e44848); stroke: var(--color1, #e44848)" stroke="#e44848" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.3742" d="M25.641 4.759c-0.527-0.527-1.153-0.946-1.842-1.231s-1.427-0.432-2.173-0.432-1.484 0.147-2.173 0.432c-0.689 0.285-1.315 0.704-1.842 1.231l-1.094 1.094-1.094-1.094c-1.065-1.065-2.509-1.663-4.015-1.663s-2.95 0.598-4.015 1.663c-1.065 1.065-1.663 2.509-1.663 4.015s0.598 2.95 1.663 4.015l9.125 9.125 9.125-9.125c0.527-0.527 0.946-1.153 1.231-1.842s0.432-1.427 0.432-2.173-0.147-1.484-0.432-2.173c-0.285-0.689-0.704-1.315-1.231-1.842z"></path>
-</symbol>
+    <symbol id="favorite" viewBox="0 0 24 26">
+        <path fill="#e44848" style="fill: var(--color1, #e44848); stroke: var(--color1, #e44848)" stroke="#e44848" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.3742" d="M25.641 4.759c-0.527-0.527-1.153-0.946-1.842-1.231s-1.427-0.432-2.173-0.432-1.484 0.147-2.173 0.432c-0.689 0.285-1.315 0.704-1.842 1.231l-1.094 1.094-1.094-1.094c-1.065-1.065-2.509-1.663-4.015-1.663s-2.95 0.598-4.015 1.663c-1.065 1.065-1.663 2.509-1.663 4.015s0.598 2.95 1.663 4.015l9.125 9.125 9.125-9.125c0.527-0.527 0.946-1.153 1.231-1.842s0.432-1.427 0.432-2.173-0.147-1.484-0.432-2.173c-0.285-0.689-0.704-1.315-1.231-1.842z"></path>
+    </symbol>
     <symbol id="freezer" viewBox="0 0 32 32">
         <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.0800" d="M23.4 3h-14.793c-1.105 0-2 0.895-2 2v20.387c0 1.104 0.895 2 2 2h14.793c1.104 0 2-0.896 2-2v-20.387c0-1.105-0.896-2-2-2z"></path>
         <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.0800" d="M6.607 13.127h18.787M10.313 10.567v-4.040M10.313 19.44v-4.040M8.427 27.387v0.7c0 0.241 0.095 0.472 0.265 0.643s0.4 0.268 0.642 0.27h1.647c0.242 0 0.475-0.096 0.646-0.268s0.268-0.404 0.268-0.646v-0.7M20.1 27.387v0.7c0 0.242 0.096 0.474 0.268 0.646s0.404 0.268 0.646 0.268h1.653c0.242 0 0.474-0.096 0.646-0.268s0.268-0.404 0.268-0.646v-0.7"></path>

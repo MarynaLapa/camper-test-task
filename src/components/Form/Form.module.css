@@ -1,0 +1,123 @@
+.form {
+    border: 1px solid rgba(16, 24, 40, 0.2);
+    border-radius: 10px;
+    padding: 24px;
+    /* height: 100%; */
+}
+
+.formTitle {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--main);
+    margin-bottom: 8px;
+}
+
+.text {
+    margin-bottom: 24px;
+}
+
+.input {
+    border-radius: 10px;
+    border: none;
+    padding: 18px 18px;
+    width: 400px;
+    height: 56px;
+    background-color: var(--inputs);
+}
+
+.input::placeholder {
+    color: rgba(16, 24, 40, 0.6);
+}
+
+textarea {
+    border-radius: 10px;
+    padding: 18px 18px;
+    width: 400px;
+    height: 114px;
+    background-color: var(--inputs);
+    resize: none;
+    border: none;
+    margin-bottom: 24px;
+}
+
+textarea::placeholder {
+    padding: 18px 18px;
+    color: rgba(16, 24, 40, 0.6);
+}
+
+.error {
+    height: 16px;
+    color: red;
+    font-size: 14px;
+    line-height: 1.29;
+}
+
+.error::first-letter {
+    text-transform: capitalize;
+}
+
+.inputError {
+    color: red;
+    border: 1px solid red;
+}
+
+.svg_input {
+    position: relative;
+    width: 400px;
+    height: 56px;
+}
+
+.calendar {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 18px 18px;
+    width: 300px;
+    height: 56px;
+    border: none;
+    /* margin-bottom: 10px; */
+    /* font-size: 14px; */
+    background-color: var(--inputs);
+}
+
+.icon {
+    display: block;
+    stroke: var(--main);
+    fill: transparent;
+}
+
+.position {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 0;
+    border: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.btn {
+    display: block;
+    border-radius: 200px;
+    padding: 16px 60px;
+    border: none;
+    background-color: var(--button);
+    color: var(--white);
+    margin: 0;
+    letter-spacing: -0.01em;   
+    transition: border-color var(--transition-options);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover, 
+.btn:focus {
+    /* transition: border-color var(--transition-options); */
+        /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15); */
+    background-color: #d84343;
+    
+}
+
+

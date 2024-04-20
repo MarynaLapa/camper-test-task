@@ -4,14 +4,17 @@ import { advertsSelector } from 'store/camper/selctors'
 import CatalogListCard from 'components/CatalogListCard/CatalogListCard'
 
 import css from './CatalogList.module.css'
+import { favoriteSelector } from 'store/favorites/selectors'
 
 const CatalogList = () => {
 
-  const campers =  useSelector(advertsSelector)
+  const campers = useSelector(advertsSelector)
+  const favoriteList = useSelector(favoriteSelector)
+  console.log('favorite', favoriteList)
 
   return (
     <ul className={css.list}>
-      {campers.length !== 0 && campers.map(camper => 
+      {campers.length !== 0 && campers.map((camper, i) => 
         <li key={camper.id} className={css.item}>
           <CatalogListCard
             id={camper.id}
@@ -27,6 +30,7 @@ const CatalogList = () => {
             engine={camper.engine}
             transmission={camper.transmission}
             image={camper.gallery[0]}
+            favorite={favoriteList[i]?.favorite}
           />  
         </li>
         )} 

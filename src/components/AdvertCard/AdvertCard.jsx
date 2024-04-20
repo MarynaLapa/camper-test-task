@@ -1,12 +1,12 @@
 import { useSelector } from 'react-redux';
 import { camperInfoSelector } from 'store/camper/selctors';
 import RatingLocationList from 'components/RatingLocationList/RatingLocationList'
-
 import css from "./AdvertCard.module.css"
 import GalleryList from 'components/GalleryList/GalleryList';
 import { Svg } from 'components/Icons/Icons';
 // import { useState } from 'react';
 import Features from 'components/Features/Features';
+import Form from 'components/Form/Form';
 
 const AdvertCard = ({ onClose }) => {
 
@@ -47,7 +47,9 @@ const AdvertCard = ({ onClose }) => {
 
                 <div className={css.position}>
                     <Features />
-                    <div className={css.form}></div>
+                <div className={css.form}>
+                    <Form/>
+                </div>
                 </div>
             </div>) : null}
     </>

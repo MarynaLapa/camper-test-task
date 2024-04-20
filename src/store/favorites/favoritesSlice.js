@@ -12,7 +12,7 @@ const favoriteSlice = createSlice({
             const index = state.favorite.findIndex(element => element.id === payload.id); // -1, not found
     
             if (index === -1) {
-                state.favorite.push(payload)
+                state.favorite.push({ ...payload, favorite: true })
             } else {
                 state.favorite.splice(index, 1)
             }

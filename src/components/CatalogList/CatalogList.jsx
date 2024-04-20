@@ -7,32 +7,7 @@ import css from './CatalogList.module.css'
 
 const CatalogList = () => {
 
-  // const adverts = useSelector(advertsSelector)
   const campers =  useSelector(advertsSelector)
-  // let set = new Set();
-
-  // adverts.forEach(element => {
-  //   if (set.has(element)) return false
-  //   else set.add(element)
-  // });
-
-  // console.log('set', set.values().next().value)
-
-  // for (let i = 0; i < adverts.length; i += 1) {
-  //          console.log('set', set)        
-  //                 if (set[i].has(adverts[i])) return false
-  //                   else set.add(adverts[i])
-                    // console.log('element', adverts[i]._id)
-                // }
-                // set.add(payload)
-                // console.log('set', set.values().next())
-                // state.adverts = set.values().next().value
-  // set.add(adverts)
-  // const campers =  set.values().next().value
-// console.log('set', set.values().next())
-  // console.log('campers', campers)
-  
-
 
   return (
     <ul className={css.list}>

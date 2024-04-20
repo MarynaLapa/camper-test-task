@@ -16,34 +16,6 @@
     width: 526px;
 }
 
-.position {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.titlePrice {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 1.25;
-    color: var(--main);
-}
-
-.positionPrice {
-    display: flex;
-}
-
-.btn {
-    border: none;
-    background-color: transparent;
-}
-
-.icon {
-    display: block;
-    stroke: var(--main);
-    fill: transparent;
-}
 
 .description {
     display: inline-flex;

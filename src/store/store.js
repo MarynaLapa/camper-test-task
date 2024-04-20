@@ -11,17 +11,17 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { camperReducer } from './camper/camperSlice';
+import { favoriteReducer } from './favorites/favoritesSlice';
 
-const camperPersistConfig = {
-  key: 'auth',
+const favoritePersistConfig = {
+  key: 'favorite',
   storage,
-  whitelist: ['camperInfo'],
 };
 
 export const store = configureStore({
   reducer: {
-    // favorite: persistReducer(authPersistConfig, authReducer),
-    camper: persistReducer(camperPersistConfig, camperReducer),
+    favorite:  persistReducer(favoritePersistConfig, favoriteReducer),
+    camper: camperReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

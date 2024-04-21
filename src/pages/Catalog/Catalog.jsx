@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getPageAdvertsThunk} from 'store/camper/camperThunk'
-import AsideFilter from 'components/AsideFilter/AsideFilter'
 import CatalogList from 'components/CatalogList/CatalogList'
 
 import css from './Catalog.module.css'
 import Button from 'components/Button/Button'
-import { advertsSelector, loadMoreSelector, totalSelector } from 'store/camper/selctors'
+import { advertsSelector, loadMoreSelector, totalSelector } from 'store/camper/selectors'
+import FiltersForm from 'components/Filter/Filter'
 
 const Catalog = () => {
 
@@ -18,7 +18,7 @@ const Catalog = () => {
   const total = useSelector(totalSelector)
   const adverts = useSelector(advertsSelector)
   const loadMore = useSelector(loadMoreSelector)
-  
+
   useEffect(() => {
       
     dispatch(getPageAdvertsThunk({
@@ -39,7 +39,7 @@ const Catalog = () => {
   return (
     <section className={css.section}>
       <div className={`container ${css.catalog}`}>
-        <AsideFilter />
+        <FiltersForm />
         <div>
           <CatalogList />
           {loadMore && isShowButton && adverts.length !== 0 &&

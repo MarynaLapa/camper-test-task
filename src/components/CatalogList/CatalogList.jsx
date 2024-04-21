@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { advertsSelector } from 'store/camper/selctors'
+import { advertsSelector } from 'store/camper/selectors'
 
 import CatalogListCard from 'components/CatalogListCard/CatalogListCard'
 

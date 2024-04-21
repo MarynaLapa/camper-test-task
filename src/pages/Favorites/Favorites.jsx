@@ -1,12 +1,11 @@
 import CatalogListCard from 'components/CatalogListCard/CatalogListCard'
-import css from "./Favorite.module.css"
+import css from "./Favorites.module.css"
 import { useSelector } from 'react-redux'
 import { favoriteSelector } from 'store/favorites/selectors'
 
 const Favorites = () => {
 
   const favoriteList = useSelector(favoriteSelector)
-  console.log('favorite', favoriteList)
 
   return (
     <section className={css.section}>

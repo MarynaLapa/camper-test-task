@@ -2,7 +2,7 @@ import css from "./CategoriesList.module.css"
 import { ReactComponent as Ac } from '../../images/ac.svg'
 import { Svg } from "components/Icons/Icons";
 import { useSelector } from "react-redux";
-import { camperInfoSelector } from "store/camper/selctors";
+import { camperInfoSelector } from "store/camper/selectors";
 
 const CategoriesList = () => {
 

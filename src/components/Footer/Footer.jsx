@@ -1,8 +1,16 @@
-// import css from './Footer.module.css'
+import css from './Footer.module.css'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer className={css.footer}>
+      <div className="container">
+      <div className={css.wrapper}>
+        <img src="./logo.png" alt="Logo" width={50} height={50} className={css.logo} />
+        <h1 className={css.logoText}>Camper in UKRAINE</h1> 
+      </div>
+        <p></p>
+      </div>
+    </footer>
   )
 }
 

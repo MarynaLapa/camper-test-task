@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { camperInfoSelector } from 'store/camper/selctors'
+import { camperInfoSelector } from 'store/camper/selectors'
 
 import css from './VehicleDetailsList.module.css'
 

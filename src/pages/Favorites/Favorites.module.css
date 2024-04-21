@@ -4,8 +4,10 @@
 
 .list {
     margin-bottom: 50px;
+    margin: 0 auto;
+    width: 900px;
 }
 
 .item:not(:last-child) {
-    margin-bottom: 32px;
+   padding-bottom: 32px;
 }

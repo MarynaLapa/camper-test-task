@@ -42,7 +42,6 @@ textarea {
 }
 
 textarea::placeholder {
-    padding: 18px 18px;
     color: rgba(16, 24, 40, 0.6);
 }
 

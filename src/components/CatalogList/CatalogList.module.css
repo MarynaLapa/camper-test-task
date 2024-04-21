@@ -3,5 +3,5 @@
 }
 
 .item:not(:last-child) {
-    margin-bottom: 32px;
+    padding-bottom: 32px;
 }

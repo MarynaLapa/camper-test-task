@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { camperInfoSelector } from 'store/camper/selctors';
+import { camperInfoSelector } from 'store/camper/selectors';
 import RatingLocationList from 'components/RatingLocationList/RatingLocationList'
 import css from "./AdvertCard.module.css"
 import GalleryList from 'components/GalleryList/GalleryList';
@@ -11,10 +11,8 @@ import Reviews from 'components/Reviews/Reviews';
 
 const AdvertCard = ({ onClose,  hidden, onClick }) => {
 
-    
     const [showFeatures, setShowFeatures] = useState(false)
     const [showReviews, setShowReviews] = useState(false)
-
 
     const camperInfo = useSelector(camperInfoSelector)
     const { id, reviews, rating, location, name, price, gallery, description } = camperInfo
@@ -37,7 +35,7 @@ const AdvertCard = ({ onClose,  hidden, onClick }) => {
             default:
                 return;
         }
-        
+
     }
 
     return (
@@ -63,10 +61,10 @@ const AdvertCard = ({ onClose,  hidden, onClick }) => {
                 </div>
                 <ul className={css.list} onClick={hadlerClick}>
                     <li>
-                        <button type="button" className={css.button} data-action="Features">Features</button>
+                        <button type="button" className={showFeatures ? `active ${css.button}` : css.button} data-action="Features">Features</button> 
                     </li>
                     <li>
-                        <button type="button" className={css.button} data-action="Reviews">Reviews</button>
+                        <button type="button" className={showReviews ? `active ${css.button}` : css.button}  data-action="Reviews">Reviews</button>
                     </li>
                 </ul>
 

@@ -6,6 +6,9 @@
     padding: 24px;
     width: 888px;
 }
+.card:hover {
+    border-color: var(--button);
+}
 
 .image {
     border-radius: 10px;

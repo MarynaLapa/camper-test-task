@@ -9,7 +9,7 @@ function Header() {
               <nav className={style.navList}>
                     <div className={style.wrapper}>
                         <img src="./logo.png" alt="Logo" width={50} height={50} className={style.logo} />
-                        <span className={style.span}>Camper in UKRAINE</span> 
+                        <h1 className={style.logoText}>Camper in UKRAINE</h1> 
                     </div>
                 <ul className={style.list}>
                     <li>

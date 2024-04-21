@@ -1,0 +1,18 @@
+.section {
+    padding: 42px 0;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.25;
+    color: var(--main);
+    text-align: center;
+    margin-bottom: 24px;
+}
+.item:not(:last-child){
+    padding-bottom: 12px;
+}
+.text {
+    margin-bottom: 16px;
+}

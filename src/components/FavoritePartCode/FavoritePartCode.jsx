@@ -4,7 +4,7 @@ import { ReactComponent as Favorite } from '../../images/favorite.svg'
 import { useDispatch, useSelector } from 'react-redux'
 import { advertsSelector } from 'store/camper/selctors'
 import { toggleFavorite } from 'store/favorites/favoritesSlice'
-// import { favoriteSelector } from 'store/favorites/selectors'
+import { favoriteSelector } from 'store/favorites/selectors'
 import { useState } from 'react'
 
 const FavoritePartCode = ({name, price, id }) => {
@@ -12,12 +12,14 @@ const FavoritePartCode = ({name, price, id }) => {
     const [favorite, setFavorite] = useState(false)
 
     const adverts = useSelector(advertsSelector)
-    // const favoriteList = useSelector(favoriteSelector)
+    const favoriteList = useSelector(favoriteSelector)
+    console.log('favoriteList', favoriteList)
     const dispatch = useDispatch()
     
     // for (let i = 0; i < favoriteList.length; i += 1){
     //     const index = adverts.findIndex(element => element.id === favoriteList[i].id)
-
+    //     console.log('imdex', index)
+    //     console.log(favoriteList.find(el => el.id === adverts.id))
     // }
    
     const handlerToggle = () => {
@@ -37,17 +39,17 @@ const FavoritePartCode = ({name, price, id }) => {
         <div className={css.position}>
             <h2 className={css.titlePrice}>{name}</h2>
             <div className={css.positionPrice}>
-                <p className={css.titlePrice}><span>&#8364;</span>{price},00</p>
-                {!favorite &&
+                <p className={css.titlePrice}><span>&#8364;</span>{price.toFixed(2)}</p>
+                {favoriteList?.findIndex(el => el.id === id ) === -1 &&
                     <button className={css.btn} type="button" onClick={handlerToggle} id={id}>
                         <Svg id="#not-favorite" width={24} height={24} icon={css.icon} />
                     </button>
-                } 
-                {favorite &&
+                }  
+                {favoriteList?.findIndex(el => el.id === id ) !== -1 &&
                     <button className={css.button} type="button" onClick={handlerToggle}>
                         <Favorite icon={css.icon} />
                     </button>
-                }
+                } 
                 
             </div>
         </div>
@@ -55,3 +57,14 @@ const FavoritePartCode = ({name, price, id }) => {
 }
 
 export default FavoritePartCode
+
+//   {!favorite &&
+//                     <button className={css.btn} type="button" onClick={handlerToggle} id={id}>
+//                         <Svg id="#not-favorite" width={24} height={24} icon={css.icon} />
+//                     </button>
+//                 } 
+//                 {favorite &&
+//                     <button className={css.button} type="button" onClick={handlerToggle}>
+//                         <Favorite icon={css.icon} />
+//                     </button>
+//                 }

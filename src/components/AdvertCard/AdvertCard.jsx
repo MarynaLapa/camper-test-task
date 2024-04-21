@@ -37,8 +37,7 @@ const AdvertCard = ({ onClose,  hidden, onClick }) => {
             default:
                 return;
         }
-
-        console.log('e', e.target.dataset.action)
+        
     }
 
     return (

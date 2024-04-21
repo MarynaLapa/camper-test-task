@@ -1,6 +1,14 @@
 .header {
-    /* font-size: calc(10px + 2vmin); */
     color: white;
+}
+.wrapper {
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+.logo {
+    width: 100%;
 }
 
 .navList {
@@ -8,11 +16,16 @@
     align-items: center;
     justify-content: space-between;
     padding: 16px 0;
-/*     
-    .logo {
-        pointer-events: none;
-        filter: invert(1);
-    } */
+}
+
+.span {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;;
+    color: var(--button);
+    /* width: 50px; */
+    /* text-align: center; */
+}
     
     .list {
         display: flex;
@@ -25,5 +38,7 @@
         line-height: 1.25;
         text-align: center;
         color: var(--button);
+        padding-bottom: 14px;
         }
-}
+
+

@@ -19,14 +19,14 @@ const CategoriesList = () => {
         </div>
       </li>
 
-      {children &&
-        <li className={css.item}>
+      {children ?
+        (<li className={css.item}>
           <Svg id="#adults" width={20} height={20} />
           <div className={css.wrapp}>
               <span className={css.number}>{children}</span> 
               <p className={css.text}>children</p>
           </div>
-        </li>
+        </li>) : null
       }
 
       <li className={css.item}>

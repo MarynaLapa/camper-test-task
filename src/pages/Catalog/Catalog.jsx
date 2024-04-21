@@ -6,16 +6,18 @@ import CatalogList from 'components/CatalogList/CatalogList'
 
 import css from './Catalog.module.css'
 import Button from 'components/Button/Button'
-import { advertsSelector, totalSelector } from 'store/camper/selctors'
+import { advertsSelector, loadMoreSelector, totalSelector } from 'store/camper/selctors'
 
 const Catalog = () => {
 
   const [limit, setLimit] = useState(4)
+  const [isShowButton, setIsShowButton] = useState(true)
 
   const dispatch = useDispatch()
 
   const total = useSelector(totalSelector)
   const adverts = useSelector(advertsSelector)
+  const loadMore = useSelector(loadMoreSelector)
   
   useEffect(() => {
       
@@ -27,8 +29,10 @@ const Catalog = () => {
     
   const hendlerClick = () => {
 
-    if (total.length >= adverts.length) {
-        setLimit(limit+4)
+    if (total.length <= adverts.length + 4) {
+      setIsShowButton(false)
+    } else {
+      setLimit(limit + 4)
     }
   }
 
@@ -38,7 +42,9 @@ const Catalog = () => {
         <AsideFilter />
         <div>
           <CatalogList />
-          <Button text={"Load more"} onClick={hendlerClick} />
+          {loadMore && isShowButton && adverts.length !== 0 &&
+            <Button text={"Load more"} onClick={hendlerClick} />
+          }
         </div>
       </div>
     </section>

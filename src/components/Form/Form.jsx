@@ -5,18 +5,20 @@ import css from './Form.module.css'
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Svg } from 'components/Icons/Icons';
+import { Notify } from 'notiflix';
 
-const Form = () => {
-
+const Form = ({ onClose }) => {
 
     const { register, control, formState: { errors }, handleSubmit, reset } = useForm({
     resolver: yupResolver(OrderSchema)
     });
 
-  const onSubmit = (data) => {
-    console.log('data', data)
-    reset()
-  }
+    const onSubmit = (data) => {
+        console.log('data', data)
+        Notify.success('Your application has been accepted, expect a manager to contact you shortly.')
+        reset()
+        onClose()
+    }
 
 
   return (
@@ -47,8 +49,8 @@ const Form = () => {
                 render={({ field: { value, ...fieldProps } }) => {
                     return (
                     <div className={css.svg_input_date}>
-                        <span className={css.icon}>
-                            {/* <Eye /> */}
+                        <span className={css.position}>
+                            <Svg id="#calendar" width={20} height={20} icon={css.icon} />
                         </span> 
                         <ReactDatePicker
                             {...fieldProps}
@@ -62,10 +64,6 @@ const Form = () => {
                     );
                 }}
               />
-              <span className={css.position}>
-                  <Svg id="#calendar" width={20} height={20} icon={css.icon} />
-              </span> 
-              
         </div>
         <div className={css.error}>
             {errors?.date && <p>{ errors?.date.message || "Errors!" }</p>}

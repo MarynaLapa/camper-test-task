@@ -30,11 +30,7 @@ const FavoritePartCode = ({name, price, id }) => {
         } else {
             setFavorite(false)
         }
-       
-        // const index = adverts.findIndex(element => element.id === findAdvert.id)
-        // if (index !== -1) {
-        //     let favorite = true
-        // } 
+        
     }
 
     return (

@@ -10,7 +10,6 @@ const CatalogList = () => {
 
   const campers = useSelector(advertsSelector)
   const favoriteList = useSelector(favoriteSelector)
-  console.log('favorite', favoriteList)
 
   return (
     <ul className={css.list}>

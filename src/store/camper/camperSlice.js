@@ -32,4 +32,4 @@ const camperSlice = createSlice({
 })
 
 export const camperReducer = camperSlice.reducer
-// export const { getTotalAdverts, getPageAdverts, getCamperInfo } = camperSlice.actions
+export const { getTotalAdverts, getPageAdverts, getCamperInfo } = camperSlice.actions

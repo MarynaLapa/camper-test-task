@@ -11,7 +11,6 @@ const Features = () => {
         <h3 className={css.title}>Vehicle details</h3>
         <VehicleDetailsList/>
       </div>
-      
     </div>
   )
 }

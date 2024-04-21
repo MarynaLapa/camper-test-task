@@ -16,4 +16,3 @@ export const getCamperId = async (id) => {
     console.log('data', data)
 	return data
 }
-// console.log('first', getCamperId("1"))

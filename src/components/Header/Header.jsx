@@ -6,8 +6,11 @@ function Header() {
   return (
       <header className={style.header}>
         <div className="container">
-            <nav className={style.navList}>
-                {/* <img src="./cinema-ico.png" alt="Logo" width={50} height={50} className={style.logo} /> */}
+              <nav className={style.navList}>
+                    <div className={style.wrapper}>
+                        <img src="./logo.png" alt="Logo" width={50} height={50} className={style.logo} />
+                        <span className={style.span}>Camper in UKRAINE</span> 
+                    </div>
                 <ul className={style.list}>
                     <li>
                         <NavLink to="/" className={style.link}>Home</NavLink>

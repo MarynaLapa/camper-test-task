@@ -14,13 +14,15 @@ const List = ({ adults, children, engine, transmission, details}) => {
                 <p className={css.text}>adults</p>
             </div>
         </li>
-        {children && <li className={css.item}>
-            <Svg id="#adults" width={20} height={20} />
-            <div className={css.wrapp}>
-                <span className={css.number}>{children}</span> 
-                <p className={css.text}>children</p>
-            </div>
-        </li>}
+            {children ?
+                (<li className={css.item}>
+                    <Svg id="#adults" width={20} height={20} />
+                    <div className={css.wrapp}>
+                        <span className={css.number}>{children}</span> 
+                        <p className={css.text}>children</p>
+                    </div>
+                </li>) : null
+            }
         <li className={css.item}>
             <Svg id="#automatic" width={20} height={20} />
               <p className={css.text}>{transmission}</p>

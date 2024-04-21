@@ -1,15 +1,15 @@
-import css from './Reviews.module.css'
-
-import { Svg } from "components/Icons/Icons"
 import { useSelector } from "react-redux"
 import { camperInfoSelector } from "store/camper/selectors"
+
+import RatingStars from 'components/RatingStar/RatingStar'
+
+import css from './Reviews.module.css'
 
 const Reviews = () => {
   
   const camperInfo = useSelector(camperInfoSelector)
   const { reviews } = camperInfo
 
-  console.log(' reviewer_rating', reviews)
   return (
     <ul>
         {reviews.map((review, i) => (
@@ -18,7 +18,7 @@ const Reviews = () => {
               <span className={css.avatar}>{review.reviewer_name?.slice(0, 1).toUpperCase()}</span>    
               <div>
                 <p className={css.name}>{review.reviewer_name}</p>
-                <Svg id="#rating-star" width={16} height={16} />
+                <RatingStars rating={review.reviewer_rating}/>
               </div>
             </div>
             <p>{review.comment}</p>

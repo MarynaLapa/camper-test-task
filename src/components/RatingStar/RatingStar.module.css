@@ -1,0 +1,9 @@
+.list {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.icon {
+    display: block;
+}

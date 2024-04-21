@@ -28,7 +28,6 @@ const Favorites = () => {
                   engine={favorite.engine}
                   transmission={favorite.transmission}
                   image={favorite.gallery[0]}
-                  // favorite={favoriteList[i]?.favorite}
                 />
               </li>
             )

@@ -1,10 +1,5 @@
 import { useState } from 'react';
 import { ReactComponent as Ac } from '../../images/ac.svg'
-// import { useDispatch, useSelector } from 'react-redux';
-
-// import { selectAllCampers } from '../../store/campers/selectors';
-// import { getFullListCampers } from '../../store/campers/operations';
-// import { setFilteredCampers } from '../../store/campers/slice';
 import { Svg } from 'components/Icons/Icons';
 import Button from 'components/Button/Button';
 import css from './Filter.module.css'
@@ -23,88 +18,11 @@ const FiltersForm = ({ onFiltersChange }) => {
       case 'type': setType(value);
         break;
 
-
-      // case 'time':
-      //   setTime(value);
-      //   break;
-
-      // case 'waterRate':
-      //   setWaterRate(value);
-      //   break;
-
+       //Треба погуглити ще чекед як зробити
       default:
         return;
     }
   }
-
-  // const campers = useSelector(selectAllCampers);
-  // const [locationInputValue, setLocationInputValue] = useState('');
-  // const dispatch = useDispatch();
-  // const [selectedFilters, setSelectedFilters] = useState({
-  //   location: '',
-  //   equipment: [],
-  //   type: '',
-  // });
-
-  // useEffect(() => {
-  //   const filterCampers = () => {
-  //     const filtered = campers.filter((camper) => {
-  //       const locationMatch = camper.location
-  //         .toLowerCase()
-  //         .includes(selectedFilters.location.toLowerCase());
-
-  //       const equipmentMatch = selectedFilters.equipment.every(
-  //         (equipment) => camper.details[equipment] || camper[equipment]
-  //       );
-
-  //       const typeMatch =
-  //         selectedFilters.type === '' || camper.form === selectedFilters.type;
-
-  //       return locationMatch && equipmentMatch && typeMatch;
-  //     });
-
-  //     dispatch(setFilteredCampers(filtered));
-  //     onFiltersChange(selectedFilters);
-  //   };
-
-  //   filterCampers();
-  // }, [selectedFilters, campers, dispatch, onFiltersChange]);
-
-  // const handlerInputChange = (event) => {
-  //   const { name, value } = event.target;
-  //   setLocationInputValue(value);
-  //   setSelectedFilters({ ...selectedFilters, [name]: value });
-  // };
-
-  // const handleCheckboxChange = (event) => {
-  //   const { name, checked } = event.target;
-  //   if (checked) {
-  //     setSelectedFilters({
-  //       ...selectedFilters,
-  //       equipment: [...selectedFilters.equipment, name],
-  //     });
-  //   } else {
-  //     setSelectedFilters({
-  //       ...selectedFilters,
-  //       equipment: selectedFilters.equipment.filter(
-  //         (equipment) => equipment !== name
-  //       ),
-  //     });
-  //   }
-  // };
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   setSelectedFilters({
-  //     location: '',
-  //     equipment: [],
-  //     type: '',
-  //   });
-  // };
-
-  // useEffect(() => {
-  //   dispatch(getFullListCampers());
-  // }, [dispatch]);
 
   return (
     <form >
@@ -135,8 +53,8 @@ const FiltersForm = ({ onFiltersChange }) => {
               name="airConditioner"
               id="airConditioner"
               value="airConditioner"
-              // checked={selectedFilters.equipment.includes('airConditioner')}
-              // onChange={handleCheckboxChange}
+              // checked={cheked}
+              // onChange={handlerCheckboxChange}
             />
             <label htmlFor="airConditioner">
               <Ac width={32} height={32} />
@@ -148,8 +66,8 @@ const FiltersForm = ({ onFiltersChange }) => {
                 name="transmission"
                 id="transmission"
                 value="transmission"
-                // checked={selectedFilters.equipment.includes('transmission')}
-                // onChange={handleCheckboxChange}
+                // checked={cheked}
+                // onChange={handlerCheckboxChange}
               />
             <label htmlFor="transmission">
               <Svg id="#automatic" width={32} height={32} />
@@ -161,8 +79,8 @@ const FiltersForm = ({ onFiltersChange }) => {
               name="kitchen"
               id="kitchen"
               value="kitchen"
-              // checked={selectedFilters.equipment.includes('kitchen')}
-              // onChange={handleCheckboxChange}
+              // checked={cheked}
+              // onChange={handlerCheckboxChange}
             />
               <label htmlFor="kitchen">
                 <Svg id="#kitchen" width={32} height={32} icon={css.icon} />
@@ -174,8 +92,8 @@ const FiltersForm = ({ onFiltersChange }) => {
                 name="TV"
                 id="TV"
                 value="TV"
-                // checked={selectedFilters.equipment.includes('TV')}
-                // onChange={handleCheckboxChange}
+                // checked={cheked}
+                // onChange={handlerCheckboxChange}
               />
               <label htmlFor="TV">
                 <Svg id="#TV" width={32} height={32} icon={css.icon} />
@@ -186,8 +104,8 @@ const FiltersForm = ({ onFiltersChange }) => {
                 name="shower"
                 id="shower"
                 value="shower"
-                // checked={selectedFilters.equipment.includes('shower')}
-                // onChange={handleCheckboxChange}
+                // checked={cheked}
+                // onChange={handlerCheckboxChange}
               />
               <label htmlFor="shower">
                  <Svg id="#shower" width={32} height={32} icon={css.icon} />

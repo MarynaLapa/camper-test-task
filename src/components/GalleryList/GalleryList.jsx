@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid"
 import css from "./GalleryList.module.css"
 
-const GalleryList = ({ gallery, name, id }) => {
+const GalleryList = ({ gallery, name }) => {
  
   return (
     <ul className={css.list}>

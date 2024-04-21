@@ -17,8 +17,6 @@ export const App = () => {
     dispatch(getTotalAdvertsThunk())
 
   }, [dispatch])
-  
-  // const isLoading = useSelector(isLoadingSelector)
 
   return (
     <Suspense fallback={<>Loading...</>}>

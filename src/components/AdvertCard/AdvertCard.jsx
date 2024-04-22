@@ -50,7 +50,7 @@ const AdvertCard = ({ onClose,  hidden, onClick }) => {
                     reviews={reviews}
                     location={location}
                 />
-                <p className={css.titlePrice + ' ' + css.bottom}><span>&#8364;</span>{price},00</p>
+                <p className={css.titlePrice + ' ' + css.bottom}><span>&#8364;</span>{price?.toFixed(2)}</p>
                 <div className={css.scroll}>
                     <GalleryList
                         gallery={gallery}
@@ -80,7 +80,7 @@ const AdvertCard = ({ onClose,  hidden, onClick }) => {
                             <Form onClose={onClose} />
                         </div>
                     </div>
-                }
+                } 
         </div>) : null}
     </>
     )

@@ -11,8 +11,6 @@ export const getPageAdverts = async ({ page = 1, limit }) => {
 }
 
 export const getCamperId = async (id) => {
-
 	const { data } = await api(`/adverts/${id}`)
-    console.log('data', data)
 	return data
 }

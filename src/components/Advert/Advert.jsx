@@ -15,8 +15,6 @@ const Advert = ({ active, onClose }) => {
        
         if (e.code === 'Escape') onClose();
         if (e.currentTarget === e.target) onClose();
-
-        setHidden(false)
         
     }, [onClose])
 

@@ -13,6 +13,8 @@
 .image {
     border-radius: 10px;
     overflow: hidden;
+    width: 290px;
+    height: 310px;
 }
 
 .cardInfo {

@@ -160,7 +160,7 @@ const FiltersForm = ({ onFiltersChange }) => {
             </div>
           </div>
         </fieldset>
-        <Button showColor={true} text={'Send'} className={css.button} />
+        <Button showColor={true} text={'Search'} className={css.button} />
       </div>
     </form>
   );

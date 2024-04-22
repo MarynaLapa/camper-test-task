@@ -14,7 +14,6 @@ const Form = ({ onClose }) => {
     });
 
     const onSubmit = (data) => {
-        console.log('data', data)
         Notify.success('Your application has been accepted, expect a manager to contact you shortly.')
         reset()
         onClose()

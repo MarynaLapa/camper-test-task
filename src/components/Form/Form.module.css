@@ -70,14 +70,11 @@ textarea::placeholder {
 .calendar {
     display: block;
     box-sizing: border-box;
-    width: 100%;
     border-radius: 10px;
     padding: 18px 18px;
-    width: 300px;
+    width: 400px;
     height: 56px;
     border: none;
-    /* margin-bottom: 10px; */
-    /* font-size: 14px; */
     background-color: var(--inputs);
 }
 
@@ -96,6 +93,7 @@ textarea::placeholder {
     width: 20px;
     height: 20px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .btn {

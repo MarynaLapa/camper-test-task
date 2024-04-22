@@ -7,9 +7,9 @@ function Header() {
       <header className={style.header}>
         <div className="container">
               <nav className={style.navList}>
-                    <div className={style.wrapper}>
-                        <img src="./logo.png" alt="Logo" width={50} height={50} className={style.logo} />
-                        <h1 className={style.logoText}>Camper in UKRAINE</h1> 
+                  <div className={style.wrapper}>
+                        <img src="./logo.png" alt="Logo" width={70} height={70} className={style.logo} />
+                        <p className={style.logoText}>Camper in UKRAINE</p> 
                     </div>
                 <ul className={style.list}>
                     <li>

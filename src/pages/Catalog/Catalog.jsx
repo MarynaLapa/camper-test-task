@@ -30,6 +30,7 @@ const Catalog = () => {
   const hendlerClick = () => {
 
     if (total.length <= adverts.length + 4) {
+      setLimit(limit + 4)
       setIsShowButton(false)
     } else {
       setLimit(limit + 4)

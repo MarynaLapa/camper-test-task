@@ -21,7 +21,7 @@ const Advert = ({ active, onClose }) => {
     useEffect(() => {
         
         document.addEventListener('keydown', handlerClick)
-        active ? document.body.style.overflow = "hidden" : document.body.style.overflow = ""
+        // active ? document.body.style.overflow = "hidden" : document.body.style.overflow = ""
     
         return (() => {
             document.body.style.overflow = "";  

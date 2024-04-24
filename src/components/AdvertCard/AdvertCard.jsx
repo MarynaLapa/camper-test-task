@@ -9,17 +9,17 @@ import Features from 'components/Features/Features';
 import Form from 'components/Form/Form';
 import Reviews from 'components/Reviews/Reviews';
 
-const AdvertCard = ({ onClose,  hidden, onClick }) => {
+const AdvertCard = ({ onClose }) => {
 
     const [showFeatures, setShowFeatures] = useState(false)
     const [showReviews, setShowReviews] = useState(false)
-
+    const [hidden, setHidden] = useState(false)
     const camperInfo = useSelector(camperInfoSelector)
     const { id, reviews, rating, location, name, price, gallery, description } = camperInfo
 
     const hadlerClick = (e) => {
 
-        onClick()
+        setHidden(true)
 
         switch (e.target.dataset.action) {
             case "Features":

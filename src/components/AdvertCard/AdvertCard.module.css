@@ -64,7 +64,6 @@
     display: flex;
     gap: 40px;
     border-bottom: 1px solid rgba(16, 24, 40, 0.1);
-    margin-bottom: 44px;
 }
 
 .button {
@@ -80,6 +79,7 @@
 .position {
     display: flex;
     gap:24px;
+    margin-top: 44px;
 }
 
 

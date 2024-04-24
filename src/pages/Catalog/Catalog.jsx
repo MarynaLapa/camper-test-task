@@ -19,7 +19,6 @@ const Catalog = () => {
   // const total = useSelector(totalSelector)
   const adverts = useSelector(advertsSelector)
   const loadMore = useSelector(loadMoreSelector)
-  console.log('first', loadMore)
 
   useEffect(() => {
 

@@ -1,13 +1,14 @@
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { getCamperInfoThunk } from 'store/camper/camperThunk'
+import { Notify } from 'notiflix'
 import css from './CatalogListCard.module.css'
 import List from 'components/List/List'
 import Button from 'components/Button/Button'
-import { useState } from 'react'
-import Advert from 'components/Advert/Advert'
-import { useDispatch } from 'react-redux'
-import { getCamperInfoThunk } from 'store/camper/camperThunk'
 import RatingLocationList from 'components/RatingLocationList/RatingLocationList'
 import FavoritePartCode from 'components/FavoritePartCode/FavoritePartCode'
-import { Notify } from 'notiflix'
+import Modal from 'components/Modal/Modal'
+import AdvertCard from 'components/AdvertCard/AdvertCard'
 
 const CatalogListCard = ({
   id,
@@ -41,10 +42,6 @@ const CatalogListCard = ({
     })
   }
 
-  const handlerClose = () => {
-    setShowModal(false)
-  }
-
   return (
     <div className={css.card}>
       <div className={css.image}>
@@ -71,7 +68,9 @@ const CatalogListCard = ({
         />
         <Button showColor={true} text={'Show more'} onClick={handlerClick}/>
       </div>
-      <Advert active={showModal} onClose={handlerClose} />
+       <Modal active={showModal} onClose={()=> setShowModal(false)}>
+           <AdvertCard onClose={()=> setShowModal(false)} />
+        </Modal>
     </div>
   )
 }

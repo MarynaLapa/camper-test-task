@@ -13,5 +13,4 @@ export const handlerRejected = (state, { payload }) => {
 
 export const handlerFulfilled = state => {
     state.isLoading = false
-    state.showMore = true
 }

@@ -34,7 +34,6 @@ const CatalogList = () => {
         </li>
         )} 
     </ul>
-  
   )
 }
 

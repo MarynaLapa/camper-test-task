@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { getCamperInfoThunk, getPageAdvertsThunk, getTotalAdvertsThunk } from './camperThunk'
+import { getCamperInfoThunk, getPageAdvertsThunk } from './camperThunk'
 import { handlerFulfilled, handlerPending, handlerRejected } from './halpers'
 
 const initialState = {
@@ -7,7 +7,7 @@ const initialState = {
     camperInfo: {},
     isLoading: false,
     isError: '',
-    totalResults: [],
+    // totalResults: [],
     showMore: true
 }
 
@@ -16,15 +16,23 @@ const camperSlice = createSlice({
     initialState,
     extraReducers: builder => {
         builder
-            .addCase(getTotalAdvertsThunk.fulfilled, (state, { payload }) => {
-                state.totalResults = payload
-            })
             .addCase(getPageAdvertsThunk.fulfilled, (state, { payload }) => {
-                state.adverts = payload
+
+                if (payload.length < 4) state.showMore = false
+                else state.showMore = true
+
+                payload.forEach(el => {
+                    
+                    if (state.adverts.findIndex(advert => el.id === advert.id) === -1) {
+                        state.adverts.push(el)
+                    }
+                })
+  
             })
             .addCase(getCamperInfoThunk.fulfilled, (state, { payload }) => {
                 state.camperInfo = payload
             })
+            
             .addMatcher((action) => action.type.endsWith('/pending'), handlerPending)
             .addMatcher((action) => action.type.endsWith('/fulfilled'), handlerFulfilled)
             .addMatcher((action) => action.type.endsWith('/rejected'), handlerRejected)

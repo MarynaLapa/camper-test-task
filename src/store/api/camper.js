@@ -1,12 +1,8 @@
 import { api } from "./api";
 
-export const getAllAdverts = async () => {
-    const { data } = await api('/adverts')
-    return data
-}
-
-export const getPageAdverts = async ({ page = 1, limit }) => {
+export const getPageAdverts = async ({ page, limit }) => {
     const { data } = await api(`/adverts?page=${page}&limit=${limit}`) 
+    console.log('data', data)
     return data
 }
 

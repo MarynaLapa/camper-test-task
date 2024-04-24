@@ -1,15 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
-import { getAllAdverts, getCamperId, getPageAdverts } from "components/api/camper"
-
-export const getTotalAdvertsThunk = createAsyncThunk(
-    'adverts/getAllAdverts', async(__, { rejectWithValue }) => {
-        try {
-            return await getAllAdverts();
-        } catch (error) {
-            return rejectWithValue(error);
-        }
-    }
-)
+import { getCamperId, getPageAdverts } from "store/api/camper"
 
 export const getPageAdvertsThunk = createAsyncThunk(
     'adverts/getLoadMoreAdverts', async (body, { rejectWithValue }) => {

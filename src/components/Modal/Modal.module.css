@@ -38,3 +38,30 @@
 .modalContentActive {
     transform: translateY(0%);
 }
+
+/* .scroll {
+    width: 902px;
+    max-height: 426px;
+    overflow-y: auto;
+    margin-bottom: 44px;
+    padding-right: 10px;
+}
+
+.modalContent::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modalContent::-webkit-scrollbar-track {
+    background: transparent;
+    width: 2px;
+    margin: 0 auto;
+    border-radius: 4px;
+    max-height: 264px;
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    width: 4px;
+    height: 264px;
+    background-color: red;
+} */

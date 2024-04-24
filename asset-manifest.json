@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/camper-test-task/static/css/main.d9ecb450.css",
-    "main.js": "/camper-test-task/static/js/main.4acd7ee8.js",
-    "static/css/739.2f0cf88b.chunk.css": "/camper-test-task/static/css/739.2f0cf88b.chunk.css",
-    "static/js/739.a5ab3191.chunk.js": "/camper-test-task/static/js/739.a5ab3191.chunk.js",
+    "main.css": "/camper-test-task/static/css/main.193ff5b0.css",
+    "main.js": "/camper-test-task/static/js/main.e6ea4889.js",
+    "static/css/739.19d325e1.chunk.css": "/camper-test-task/static/css/739.19d325e1.chunk.css",
+    "static/js/739.8788925a.chunk.js": "/camper-test-task/static/js/739.8788925a.chunk.js",
     "static/css/194.912894f7.chunk.css": "/camper-test-task/static/css/194.912894f7.chunk.css",
     "static/js/194.931cc37b.chunk.js": "/camper-test-task/static/js/194.931cc37b.chunk.js",
     "static/css/457.71b23850.chunk.css": "/camper-test-task/static/css/457.71b23850.chunk.css",
     "static/js/457.eff54d57.chunk.js": "/camper-test-task/static/js/457.eff54d57.chunk.js",
-    "static/js/833.01a296ad.chunk.js": "/camper-test-task/static/js/833.01a296ad.chunk.js",
+    "static/js/833.dc248f92.chunk.js": "/camper-test-task/static/js/833.dc248f92.chunk.js",
     "static/media/icons.svg": "/camper-test-task/static/media/icons.e7f45c0b8154b8d02214779e01a49389.svg",
     "static/media/ac.svg": "/camper-test-task/static/media/ac.65778975d82b7c6d3fe9de746a895cd2.svg",
     "static/media/favorite.svg": "/camper-test-task/static/media/favorite.21ada1f6706568c00812135d38e24c76.svg",
     "index.html": "/camper-test-task/index.html",
-    "main.d9ecb450.css.map": "/camper-test-task/static/css/main.d9ecb450.css.map",
-    "main.4acd7ee8.js.map": "/camper-test-task/static/js/main.4acd7ee8.js.map",
-    "739.2f0cf88b.chunk.css.map": "/camper-test-task/static/css/739.2f0cf88b.chunk.css.map",
-    "739.a5ab3191.chunk.js.map": "/camper-test-task/static/js/739.a5ab3191.chunk.js.map",
+    "main.193ff5b0.css.map": "/camper-test-task/static/css/main.193ff5b0.css.map",
+    "main.e6ea4889.js.map": "/camper-test-task/static/js/main.e6ea4889.js.map",
+    "739.19d325e1.chunk.css.map": "/camper-test-task/static/css/739.19d325e1.chunk.css.map",
+    "739.8788925a.chunk.js.map": "/camper-test-task/static/js/739.8788925a.chunk.js.map",
     "194.912894f7.chunk.css.map": "/camper-test-task/static/css/194.912894f7.chunk.css.map",
     "194.931cc37b.chunk.js.map": "/camper-test-task/static/js/194.931cc37b.chunk.js.map",
     "457.71b23850.chunk.css.map": "/camper-test-task/static/css/457.71b23850.chunk.css.map",
     "457.eff54d57.chunk.js.map": "/camper-test-task/static/js/457.eff54d57.chunk.js.map",
-    "833.01a296ad.chunk.js.map": "/camper-test-task/static/js/833.01a296ad.chunk.js.map"
+    "833.dc248f92.chunk.js.map": "/camper-test-task/static/js/833.dc248f92.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9ecb450.css",
-    "static/js/main.4acd7ee8.js"
+    "static/css/main.193ff5b0.css",
+    "static/js/main.e6ea4889.js"
   ]
 }
